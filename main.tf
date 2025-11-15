@@ -34,11 +34,7 @@ provider "aci" {
 #}
 
 
-resource "aci_vlan_pool" "vlan_pool_vahid_120" {
-  name        = "vlan_pool_vahid_120"
-  alloc_mode  = "dynamic"   # static | dynamic
-  description = "Production VLAN Pool created via Terraform"
-}
+
 
 
 resource "aci_vlan_pool" "vlan_pool_vahid" {
@@ -171,18 +167,18 @@ resource "aci_rest" "leaf_profile_to_int_profile_association" {
 }
 
 
-##########################################################################################
-#create VPC domain
-##########################################################################################
-
-resource "aci_vpc_explicit_protection_group" "VPC_domain_vahid" {
-  name                              = "VPC_domain_vahid"
-  annotation                        = "tag_vpc"
-  switch1                           = "101"
-  switch2                           = "102"
-  vpc_domain_policy                 = "default"
-  vpc_explicit_protection_group_id  = "100"
-}
+###########################################################################################
+##create VPC domain
+###########################################################################################
+#
+#resource "aci_vpc_explicit_protection_group" "VPC_domain_vahid" {
+#  name                              = "VPC_domain_vahid"
+#  annotation                        = "tag_vpc"
+#  switch1                           = "101"
+#  switch2                           = "102"
+#  vpc_domain_policy                 = "default"
+#  vpc_explicit_protection_group_id  = "100"
+#}
 
 
 ##########################################################################################
