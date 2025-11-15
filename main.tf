@@ -1,8 +1,23 @@
-resource "aws_instance" "public_instance" {
- ami           = var.ami
- instance_type = var.instance_type
+terraform {
+  required_providers {
+    aci = {
+      source = "CiscoDevNet/aci"
+    }
+  }
+}
 
- tags = {
-   Name = var.name_tag,
- }
+
+provider "aci" {
+  # APIC Username
+  username = "admin"
+  # APIC Password
+  password = "!@#123QWEqwe"
+  # APIC URL
+  url      = "https://ddns554.ddns.net"
+  insecure = true
+}
+
+resource "aci_tenant" "tenants" {
+  count = length(local.tenants)
+  name  = local.tenants[count.index]
 }
