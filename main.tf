@@ -34,8 +34,8 @@ provider "aci" {
 #}
 
 
-resource "aci_vlan_pool" "vlan_pool_vahid_1" {
-  name        = "vlan_pool_vahid_1"
+resource "aci_vlan_pool" "vlan_pool_vahid_11" {
+  name        = "vlan_pool_vahid_11"
   alloc_mode  = "dynamic"   # static | dynamic
   description = "Production VLAN Pool created via Terraform"
 }
