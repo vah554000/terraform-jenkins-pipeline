@@ -33,12 +33,12 @@ provider "aci" {
 #  name  = local.tenants[count.index]
 #}
 
-
-resource "aci_vlan_pool" "vlan_pool_vahid-11" {
-  name        = "vlan_pool_vahid-11"
+resource "aci_vlan_pool" "vlan_pool_vahid-13" {
+  name        = "vlan_pool_vahid-13"
   alloc_mode  = "dynamic"   # static | dynamic
   description = "Production VLAN Pool created via Terraform"
 }
+
 
 resource "aci_vlan_pool" "vlan_pool_vahid-10" {
   name        = "vlan_pool_vahid-10"
