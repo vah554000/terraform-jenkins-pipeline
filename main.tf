@@ -17,7 +17,7 @@ provider "aci" {
   insecure = true
 }
 
-resource "aci_tenant" "tenants" {
-  count = length(local.tenants)
-  name  = local.tenants[count.index]
+resource "aci_tenant" "Tenant_vahid_1" {
+  name = "Tenant_vahid_1"
 }
+
