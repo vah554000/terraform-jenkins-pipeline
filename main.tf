@@ -18,7 +18,7 @@ provider "aci" {
   # APIC Password
   password = "!@#123QWEqwe"
   # APIC URL
-  url      = "https://192.168.1.117"
+  url      = "https://ddns554.ddns.net"
   insecure = true
 }
 
